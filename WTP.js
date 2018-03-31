@@ -27,23 +27,16 @@ function runQuery(numPetitions, queryURL) {
 			$('#wellSection').append(wellSection);
 
 			if (WTPData.results[i].title != "null") {
-				$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-primary">' + petitionCounter + '</span><strong>   ' + WTPData.results[i].title + "</strong></h3>");
+				$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-primary" >' + petitionCounter + '</span><strong>   ' +  WTPData.results[i].title + "</strong></h3>");
+				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>"); 
+				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].signatureCount + "<br>");
 				$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
 
 				// Log the first article's Headline to console.
 				console.log(WTPData.results[i].title);
+				console.log(WTPData.results[i].signatureCount);
 				console.log(WTPData.results[i].url);
 			}
-
-			// Then display the remaining fields in the HTML (Section Name, Date, URL)
-			//$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].isSignable + "</a>");
-			//$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].signatureCount + "</a>");
-			// $("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
-
-			// Log the remaining fields to console as well
-			//console.log(WTPData.results[i].pub_date);
-			//console.log(WTPData.results[i].section_name);
-			console.log(WTPData.results[i].url);
 		}
 	});
 
