@@ -58,7 +58,7 @@ $('#runSearch').on('click', function () {
 });
 
 // This button clears the top articles section
-// $('#clearAll').on('click', function(){
-// 	articleCounter = 0;
-// 	$("#wellSection").empty();
-// });
+ $('#clearAll').on('click', function(){
+ 	articleCounter = 0;
+ 	$("#wellSection").empty();
+ });
