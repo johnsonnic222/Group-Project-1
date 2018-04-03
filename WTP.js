@@ -16,11 +16,11 @@ function runQuery(numPetitions, queryURL) {
 			console.log(WTPData);
 			console.log("------------------------------------")
 
-	
+
 		for (var i = 0; i < numPetitions; i++) {
 			petitionCounter++;
 
-			
+
 			var wellSection = $("<div>");
 			wellSection.addClass('well');
 			wellSection.attr('id', 'petitionWell-' + petitionCounter)
@@ -28,7 +28,7 @@ function runQuery(numPetitions, queryURL) {
 
 			if (WTPData.results[i].title != "null") {
 				$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-primary" >' + petitionCounter + '</span><strong>   ' +  WTPData.results[i].title + "</strong></h3>");
-				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>"); 
+				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>");
 				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].signatureCount + "<br>");
 				$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
 
@@ -62,3 +62,7 @@ $('#runSearch').on('click', function () {
  	articleCounter = 0;
  	$("#wellSection").empty();
  });
+
+// ----------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------
