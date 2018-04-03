@@ -2,130 +2,208 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>We The People Search</title>
+	<meta charset="UTF-8">
+	<title>We The People Search</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-    <style>
-        .panel-body a {
-            word-break: break-all
-        }
-
-		body {
-			background-image: url(http://i68.tinypic.com/o0tij7.jpg)
+	<style>
+		.panel-body a {
+			word-break: break-all
 		}
-    </style>
+
+		.item img {
+    		height: 450px !important;
+    		width: 850px !important;
+			width: 50%;
+			margin: auto;
+					}
+
+		.circle img {
+			width: 50%;
+			margin: auto;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		h2 {
+			text-align: center;
+			color: whitesmoke solid 10px;
+		}
+
+		p {
+			text-align: center;
+			font-size: 1.5em;
+			font: white solid 3px;
+		}
+
+		
+		body {
+			background-color: black;
+		}
+
+		.footer {
+    		position: fixed;
+    		left: 0;
+    		bottom: 0;
+    		width: 100%;
+    		background-color: black;
+    		color: white;
+    		text-align: center;
+}
+
+	</style>
 </head>
 
 
-<body>
-    <div class="container">
-        <div class="jumbotron" style="background-color: #20315A ; color: white;">
-            <h1 class="text-center">
-                <strong>We The People</strong>
-			</h1>
-		<div>
-			<button><a href="https://petitions.whitehouse.gov/petition/create" target="_blank">Create a Petition!</a></button>
+<body>	
+	
+	<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: black">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a    href="https://petitions.whitehouse.gov/petition/create" target="_blank">Create a Petition!</a>
+			</li>
+			</li>
+			<li><a href="https://petitions.whitehouse.gov/petition/create" target="_blank">Contact</a>
+			</li>
+		</ul>
+	</nav>
+
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		
+			<ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+		  
+			<div class="carousel-inner item">
+			  <div class="item active">
+				<img src="http://i67.tinypic.com/219e610.jpg">
+			  </div>		
+			  <div class="item">
+					<img src="http://i63.tinypic.com/fciftd.jpg">
+				  </div>  
+			  <div class="item">
+				<img src="http://i67.tinypic.com/v4ry9j.jpg">
+			  </div>
+
+			  <div class="item">
+					<img src="http://i65.tinypic.com/2ibhwyv.jpg">
+				  </div>
+		  
+			  <div class="item">
+				<img src="http://i63.tinypic.com/2ylmsev.jpg">
+			  </div>
 			</div>
-        </div>
+		  
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			  <span class="glyphicon glyphicon-chevron-left"></span>
+			  <span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			  <span class="glyphicon glyphicon-chevron-right"></span>
+			  <span class="sr-only">Next</span>
+			</a>
+		  </div>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <br>
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <strong>Search Parameters</strong>
-                        </h3>
-                    </div>
-                    <div class="panel-body">
+<br><br>
+<div class="row">
+		<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h1>SPEAK UP --- KNOW WHATS GOING ON --- GET INVOLVED </h1>
+		<p>This website provides readers the convience of tracking current events they are passionate about in The New York Times and Twitter.
+			The results of their finds can then be searched against the We the People petition website to check if there are any active relavent petitions avaialbe for signing.  If not, the reader
+			has the option of creating their own petition on the We the People website. 
+		   </p>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<br><br>
 
-                    
-                        <form role="form">
+<div class="row">
+	<div class="col-md-1"></div>
+		<div class="col-md-10">
+				<div class="panel">
+						<div class="panel-heading">
+							<h3 class="panel-title">
+								<strong>Search Parameters</strong>
+							</h3>
+	
+			<div class="panel-body">
+				<form role="form">
+					<div class="form-group">
+						<label for="search">Search Term:</label>
+						<input type="text" class="form-control" id="searchTerm">
+					</div>
 
-                          
-                            <div class="form-group">
-                                <label for="search">Search Term:</label>
-                                <input type="text" class="form-control" id="searchTerm">
-                            </div>
+					<div class="form-group">
+						<label for="pwd">Number of Records to Retrieve:</label>
+						<select class="form-control" id="numRecordsSelect">
+							<option value="1">1</option>
+							<option value="5">5</option>
+							<option value="10">10</option>
+						</select>
+					</div>
 
-                            
-                            <div class="form-group">
-                                <label for="pwd">Number of Records to Retrieve:</label>
-                                <select class="form-control" id="numRecordsSelect">
-                                    <option value="1">1</option>
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
+						<button type="submit" class="btn btn-default" id="runSearch">
+							Search</button>
+						<button type="button" class="btn btn-default" id="clearAll">
+							Clear Results</button>
+						<button type="button" class="btn btn-default" id="most">
+							Most # of Signatures</button>
+						<button type="button" class="btn btn-default" id="least">
+							Least # of Signatures</button>
+						
+
+				</form>
+			</div>
+		</div>
+		<div class="col-md-1"></div>
+		</div>
+	</div>
+
+<div class="row circle">
+	<div class="col-md-4"><br>
+		<img class="img-circle" src="http://i64.tinypic.com/5ulogz.jpg" margin= "auto"  width="200" height="200"><br>
+		<h2>We The People</h2>
+		<div class="panel-body" style="background-color: whitesmoke" id="wellSection"></div>
+	</div>
+		
+
+	<div class="col-md-4"><br>
+		<img class="img-circle" src="http://i67.tinypic.com/2nv7c7m.png" margin= "auto"  width="200" height="200"><br>
+		<h2>New York Times</h2>
+		<div class="panel-body" style="background-color: whitesmoke" id="nytSection"></div>
+	</div>
+	
+
+	<div class="col-md-4"><br>
+		<img class="img-circle" src="http://i63.tinypic.com/1zp5cli.png" margin= "auto"  width="200" height="200"><br>
+		<h2>Twitter</h2>
+		<div class="panel-body" style="background-color: whitesmoke" id="wellSection"></div>
+	</div>
+		
+</div>
+
+	<br><br><br>
 
 
-                            <button type="submit" class="btn btn-default" id="runSearch">
-                                Search</button>
-                            <button type="button" class="btn btn-default" id="clearAll">
-								Clear Results</button>
-							<button type="button" class="btn btn-default" id="most">
-										Most # of Signatures</button>
-							<button type="button" class="btn btn-default" id="least">
-												Least # of Signatures</button>
-								
+	<!-- jQuery JS -->
+	<script src="https://code.jquery.com/jquery.js"></script>
 
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<!-- Code to the Javascript File -->
+	<script src="WTP.js"></script>
 
-       
-        <div class="row">
-            <div class="col-sm-12">
-                <br>
+	<br><br><br>
 
-                
-                <div class="panel panel-primary">
+	<div class="footer">
+			<p>SPEAK UP --- KNOW WHATS GOING ON --- GET INVOLVED</p>
+		  </div>
 
-                    
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <strong>
-                                Petitions</strong>
-                        </h3>
-                    </div>
-
-                    <!-- This main panel will hold each of the resulting articles -->
-                    <div class="panel-body" id="wellSection">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-       
-        <div class="row">
-            <div class="col-sm-12">
-
-                
-                <hr>
-                <h5 class="text-center">
-                    <small>
-
-                    </small>
-                </h5>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-
-    <!-- Code to the Javascript File -->
-    <script src="WTP.js"></script>
 
 </body>
 
