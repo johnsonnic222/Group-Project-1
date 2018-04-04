@@ -1,68 +1,73 @@
 var authKey = "sa7Im6LlV1A14WoGvUiRHp28lycfPPy6904zJ4En";
 var queryTerm = "";
-var queryURLBase = "https://api.whitehouse.gov/v1/petitions.json?";
+var apiURLBase = "https://api.whitehouse.gov/v1/petitions.json?";
 var petitionCounter = 0;
 
 
-function runQuery(numPetitions, queryURL) {
+function runQuery(numPetitions, apiURL) {
 
-	$.ajax({ url: queryURL, method: "GET" })
-	.done(function (WTPData) {
+	$.ajax({ url: apiURL, method: "GET" })
+		.done(function (WTPData) {
 
 			console.log("------------------------------------")
-			console.log("URL: " + queryURL);
+			console.log("URL: " + apiURL);
 			console.log("------------------------------------")
 
 			console.log(WTPData);
 			console.log("------------------------------------")
 
 
-		for (var i = 0; i < numPetitions; i++) {
-			petitionCounter++;
+			for (var i = 0; i < numPetitions; i++) {
+				petitionCounter++;
 
 
-			var wellSection = $("<div>");
-			wellSection.addClass('well');
-			wellSection.attr('id', 'petitionWell-' + petitionCounter)
-			$('#wellSection').append(wellSection);
+				var wellSection = $("<div>");
+				wellSection.addClass('well');
+				wellSection.attr('id', 'petitionWell-' + petitionCounter)
+				$('#wellSection').append(wellSection);
 
-			if (WTPData.results[i].title != "null") {
-				$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-primary" >' + petitionCounter + '</span><strong>   ' +  WTPData.results[i].title + "</strong></h3>");
-				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>");
-				$("#petitionWell-" + petitionCounter).append(WTPData.results[i].signatureCount + "<br>");
-				$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
+				if (WTPData.results[i].title != "null") {
+					$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-default" >' + petitionCounter + '</span><strong>   ' + WTPData.results[i].title + "</strong></h3>");
+					//$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>"); 
+					$("#petitionWell-" + petitionCounter).append(WTPData.results[i].signatureCount + "<br>");
+					$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
 
-				// Log the first article's Headline to console.
-				console.log(WTPData.results[i].title);
-				console.log(WTPData.results[i].signatureCount);
-				console.log(WTPData.results[i].url);
+					// Log the first article's Headline to console.
+					// console.log(WTPData.results[i].title);
+					// console.log(WTPData.results[i].signatureCount);
+					// console.log(WTPData.results[i].url);
+				}
 			}
-		}
-	});
+		});
 
 }
 
-$('#runSearch').on('click', function () {
+$('#runWTP').on('click', function () {
 	event.preventDefault();
 
 	petitionCounter = 0;
 	$("#wellSection").empty();
 
 	var searchTerm = $('#searchTerm').val().trim();
-    queryURL = queryURLBase + "&title=" + searchTerm + "&body=" + searchTerm;
+	apiURL = apiURLBase + "&title=" + searchTerm + "&body=" + searchTerm;
 
 	numResults = $("#numRecordsSelect").val();
 
-	runQuery(numResults, queryURL);
+	runQuery(numResults, apiURL);
 
 });
 
 // This button clears the top articles section
- $('#clearAll').on('click', function(){
- 	articleCounter = 0;
- 	$("#wellSection").empty();
- });
+$('#clearAll').on('click', function () {
+	articleCounter = 0;
+	$("#wellSection").empty();
+});
 
-// ----------------------------------------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
