@@ -71,10 +71,10 @@ $('#most').on('click', function () {
 	$("#searchTerm.form-control").empty();
 
 	var searchTerm = $('#searchTerm').val().trim();
-	queryURL = queryURLBase + "&title=" + searchTerm + "&body=" + searchTerm;
-	queryURL += '&sortBy=signature_count&sortOrder=asc';
+	apiURL = apiURLBase + "&title=" + searchTerm + "&body=" + searchTerm;
+	apiURL += '&sortBy=signature_count&sortOrder=desc';
 
-	numResults = '10'
+	numResults = 10;
 
 	runQuery(numResults, apiURL);
 });
@@ -86,15 +86,66 @@ $('#least').on('click', function () {
 	$("#wellSection").empty();
 
 	var searchTerm = $('#searchTerm').val().trim();
-	queryURL = queryURLBase + "&title=" + "&body=";
-	queryURL += '&sortBy=signature_count&sortOrder=asc';
+	apiURL = apiURLBase + "&title=" + "&body=";
+	apiURL += '&sortBy=signature_count&sortOrder=asc';
 
-	numResults = "10"
+	numResults = 10;
+
+	runQuery(numResults, apiURL);
+});
+
+$('#customDonald').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	var searchTerm = "Donald Trump"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "Donald Trump";
+	
+
+	numResults = 5;
 
 	runQuery(numResults, apiURL);
 });
 
 
+$('#customNRA').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	var searchTerm = "gun"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "gun";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
+
+
+$('#customRussia').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	//var searchTerm = "Russia"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "russia";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
 
 
 

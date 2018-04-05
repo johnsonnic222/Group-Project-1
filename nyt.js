@@ -112,13 +112,13 @@ $('#customDonald').on('click', function(){
 	queryURL = queryURLBase + searchTerm;
 
 	// Num Results
-	numResults = "10"
+	numResults = "5"
 
 	// Start Year
-	startYear = "2000"
+	startYear = "2018"
 
 	// End Year
-	endYear = "2018"
+	//endYear = "2018"
 
 	// If the user provides a startYear -- the startYear will be included in the queryURL
 	if (parseInt(startYear)) {
@@ -126,9 +126,9 @@ $('#customDonald').on('click', function(){
 	}
 
 	// If the user provides a startYear -- the endYear will be included in the queryURL
-	if (parseInt(endYear)) {
-		queryURL = queryURL + "&end_date=" + endYear + "0101";
-	}
+	//if (parseInt(endYear)) {
+	//	queryURL = queryURL + "&end_date=" + endYear + "0101";
+	//}
 
 	// Then we will pass the final queryURL and the number of results to include to the runQuery function
 	runAPIQuery(numResults, queryURL);
@@ -147,13 +147,13 @@ $('#customNRA').on('click', function(){
 	queryURL = queryURLBase + searchTerm;
 
 	// Num Results
-	numResults = "10"
+	numResults = "5"
 
 	// Start Year
-	startYear = "2000"
+	startYear = "2017"
 
 	// End Year
-	endYear = "2018"
+	//endYear = "2018"
 
 	// If the user provides a startYear -- the startYear will be included in the queryURL
 	if (parseInt(startYear)) {
@@ -161,9 +161,9 @@ $('#customNRA').on('click', function(){
 	}
 
 	// If the user provides a startYear -- the endYear will be included in the queryURL
-	if (parseInt(endYear)) {
-		queryURL = queryURL + "&end_date=" + endYear + "0101";
-	}
+	//if (parseInt(endYear)) {
+		//queryURL = queryURL + "&end_date=" + endYear + "0101";
+	//}
 
 	// Then we will pass the final queryURL and the number of results to include to the runQuery function
 	runAPIQuery(numResults, queryURL);
@@ -182,13 +182,13 @@ $('#customRussia').on('click', function(){
 	queryURL = queryURLBase + searchTerm;
 
 	// Num Results
-	numResults = "10"
+	numResults = "5"
 
 	// Start Year
-	startYear = "2000"
+	startYear = "2017"
 
 	// End Year
-	endYear = "2018"
+//	endYear = "2017"
 
 	// If the user provides a startYear -- the startYear will be included in the queryURL
 	if (parseInt(startYear)) {
@@ -196,9 +196,9 @@ $('#customRussia').on('click', function(){
 	}
 
 	// If the user provides a startYear -- the endYear will be included in the queryURL
-	if (parseInt(endYear)) {
-		queryURL = queryURL + "&end_date=" + endYear + "0101";
-	}
+	//if (parseInt(endYear)) {
+		//queryURL = queryURL + "&end_date=" + endYear + "0101";
+	//}
 
 	// Then we will pass the final queryURL and the number of results to include to the runQuery function
 	runAPIQuery(numResults, queryURL);
