@@ -63,6 +63,37 @@ $('#clearAll').on('click', function () {
 	$("#wellSection").empty();
 });
 
+$('#most').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+	$("#searchTerm.form-control").empty();
+
+	var searchTerm = $('#searchTerm').val().trim();
+	queryURL = queryURLBase + "&title=" + searchTerm + "&body=" + searchTerm;
+	queryURL += '&sortBy=signature_count&sortOrder=asc';
+
+	numResults = '10'
+
+	runQuery(numResults, apiURL);
+});
+
+$('#least').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	var searchTerm = $('#searchTerm').val().trim();
+	queryURL = queryURLBase + "&title=" + "&body=";
+	queryURL += '&sortBy=signature_count&sortOrder=asc';
+
+	numResults = "10"
+
+	runQuery(numResults, apiURL);
+});
+
 
 
 
