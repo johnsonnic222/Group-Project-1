@@ -54,7 +54,7 @@ var vaccines = $(`
 $('#customVaccines').on('click', function () {
     event.preventDefault();
     $("#wellSection3").empty();
-    $('#wellSection3').append(nra);
+    $('#wellSection3').append(vaccines);
 
 });
 
@@ -68,7 +68,7 @@ var twitter = $(`
 $('#customTwitter').on('click', function () {
     event.preventDefault();
     $("#wellSection3").empty();
-    $('#wellSection3').append(nra);
+    $('#wellSection3').append(twitter);
 
 });
 
@@ -82,7 +82,7 @@ var immigration = $(`
 $('#customImmigration').on('click', function () {
     event.preventDefault();
     $("#wellSection3").empty();
-    $('#wellSection3').append(nra);
+    $('#wellSection3').append(immigration);
 
 });
 
