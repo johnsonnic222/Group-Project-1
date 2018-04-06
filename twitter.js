@@ -44,6 +44,63 @@ $('#customNRA').on('click', function () {
 
 });
 
+var vaccines = $(`
+   <div class="twitter-widget-container">
+            <a class="twitter-timeline"  href="https://twitter.com/hashtag/VaccinesKill" data-widget-id="982062940810444800">#VaccinesKill Tweets</a>
+           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+`);
+
+$('#customVaccines').on('click', function () {
+    event.preventDefault();
+    $("#wellSection3").empty();
+    $('#wellSection3').append(nra);
+
+});
+
+var twitter = $(`
+   <div class="twitter-widget-container">
+   <a class="twitter-timeline"  href="https://twitter.com/hashtag/Twitter" data-widget-id="982059692338720768">#Twitter Tweets</a>
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+`);
+
+$('#customTwitter').on('click', function () {
+    event.preventDefault();
+    $("#wellSection3").empty();
+    $('#wellSection3').append(nra);
+
+});
+
+var immigration = $(`
+   <div class="twitter-widget-container">
+   <a class="twitter-timeline"  href="https://twitter.com/hashtag/Immigration" data-widget-id="982060244271480832">#Immigration Tweets</a>
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+</div>
+`);
+
+$('#customImmigration').on('click', function () {
+    event.preventDefault();
+    $("#wellSection3").empty();
+    $('#wellSection3').append(nra);
+
+});
+
+var facebook = $(`
+   <div class="twitter-widget-container">
+   <a class="twitter-timeline"  href="https://twitter.com/hashtag/Facebook" data-widget-id="982059748676616192">#Facebook Tweets</a>
+   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>  
+</div>
+`);
+
+$('#customFacebook').on('click', function () {
+    event.preventDefault();
+    $("#wellSection3").empty();
+    $('#wellSection3').append(nra);
+
+});
+
+
 $('#clearAll').on('click', function () {
 	articleCounter = 0;
 	$("#wellSection3").empty();
