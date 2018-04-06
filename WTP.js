@@ -29,13 +29,9 @@ function runQuery(numPetitions, apiURL) {
 				if (WTPData.results[i].title != "null") {
 					$("#petitionWell-" + petitionCounter).append('<h3><span class="label label-default" >' + petitionCounter + '</span><strong>   ' + WTPData.results[i].title + "</strong></h3>");
 					//$("#petitionWell-" + petitionCounter).append(WTPData.results[i].created + "<br>"); 
-					$("#petitionWell-" + petitionCounter).append(WTPData.results[i].signatureCount + "<br>");
+					$("#petitionWell-" + petitionCounter).append(`<h4>Signature Count: ${WTPData.results[i].signatureCount}</h4>`);
 					$("#petitionWell-" + petitionCounter).append("<a href='" + WTPData.results[i].url + "'>" + WTPData.results[i].url + "</a>");
 
-					// Log the first article's Headline to console.
-					// console.log(WTPData.results[i].title);
-					// console.log(WTPData.results[i].signatureCount);
-					// console.log(WTPData.results[i].url);
 				}
 			}
 		});
@@ -57,7 +53,6 @@ $('#runWTP').on('click', function () {
 
 });
 
-// This button clears the top articles section
 $('#clearAll').on('click', function () {
 	articleCounter = 0;
 	$("#wellSection").empty();
@@ -140,6 +135,78 @@ $('#customRussia').on('click', function () {
 	console.log("WTP" ,searchTerm)
 	//var searchTerm = $('#searchTerm').val().trim();
 	apiURL = apiURLBase + "&title=" + "russia";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
+
+
+$('#customTwitter').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	//var searchTerm = "Twitter"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "twitter";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
+
+
+$('#customImmigration').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	//var searchTerm = "Russia"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "immigration";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
+
+
+$('#customFacebook').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	//var searchTerm = "Russia"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "facebook";
+	
+
+	numResults = 5;
+
+	runQuery(numResults, apiURL);
+});
+
+
+$('#customVaccines').on('click', function () {
+	event.preventDefault();
+
+	petitionCounter = 0;
+	$("#wellSection").empty();
+
+	//var searchTerm = "Russia"
+	console.log("WTP" ,searchTerm)
+	//var searchTerm = $('#searchTerm').val().trim();
+	apiURL = apiURLBase + "&title=" + "vaccines";
 	
 
 	numResults = 5;
