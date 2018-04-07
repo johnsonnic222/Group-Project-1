@@ -96,7 +96,7 @@ var facebook = $(`
 $('#customFacebook').on('click', function () {
     event.preventDefault();
     $("#wellSection3").empty();
-    $('#wellSection3').append(nra);
+    $('#wellSection3').append(facebook);
 
 });
 

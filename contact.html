@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 34px;
+            color: #777;
+            background: url("http://i63.tinypic.com/33oi3qp.jpg");
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* general */
+
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            clear: both;
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-bottom: 20px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-weight: 700;
+            color: black;
+        }
+
+        h1 {
+            padding-bottom: 20px;
+            font-size: 30px;
+            line-height: 49px;
+            border-bottom: 3px solid #ddd;
+        }
+
+        h2,
+        h3 {
+            font-size: 22px;
+        }
+
+        /* header */
+
+        #masthead {
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            margin: 0 0 30px;
+            overflow: auto;
+            color: #fff;
+            background: #fff;
+            border-bottom: 2px solid #ccc;
+        }
+
+        #logo {
+            float: left;
+            width: 250px;
+            height: 90px;
+            font-family: Georgia, Times, "Times New Roman", serif;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 90px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            background: black;
+        }
+
+        nav {
+            float: right;
+            margin-top: 25px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding-left: 15px;
+            margin-left: 15px;
+            line-height: 18px;
+            color: #999;
+            text-decoration: none;
+            border-left: 1px solid #efefef;
+        }
+
+        nav a:first-child {
+            border-left: 0 none;
+        }
+
+
+
+        /* footer */
+
+        footer {
+            padding: 30px 0;
+            clear: both;
+            font-size: 12px;
+            color: #fff;
+            color: #ccc;
+            text-align: center;
+            background: black;
+            border-top: 8px solid whitesmoke;
+        }
+
+
+
+        /* main */
+
+        #main-container {
+            padding-top: 130px;
+        }
+
+        .main-section {
+
+            width: 100%;
+            max-width: 650px;
+            padding: 30px;
+            margin: 0 0 40px;
+            background: #fff;
+            border: 1px solid #ddd;
+        }
+
+
+
+        /* contact page */
+
+        img {
+            position: relative;
+            bottom: 50%;
+            left: 15%;
+        }
+
+        #contact-form ul {
+            margin-bottom: 20px;
+        }
+
+        #contact-form li {
+            margin-bottom: 10px;
+        }
+
+        label,
+        input[type=text],
+        input[type=email],
+        textarea {
+            display: block;
+            width: 100%;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            height: 35px;
+            padding: 0 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+        }
+
+        textarea {
+            height: 200px;
+        }
+
+        input[type=submit] {
+            padding: 10px 30px;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            background: black;
+            border: 0 none;
+        }
+    </style>
+
+
+
+
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: black">
+       
+        <ul class="nav navbar-nav navbar-right">
+
+            <li>
+                <a href="https://petitions.whitehouse.gov/petition/create" target="_blank">Create a Petition!</a>
+            </li>
+            <li>
+                <a href="file:///C:/Users/ni/Desktop/Group-Project-1/WTP.html" target="_blank">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12" >
+            <h1 style= "background-color: black; color: whitesmoke; text-align: center";>MINUTEMEN</h1> 
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10">
+            <div class="item">
+                <img src="http://i68.tinypic.com/2mcap8h.jpg">
+            </div>
+            <div class="col-lg-1"></div>
+        </div>
+
+
+
+
+        <div id="main-container" class="container">
+            <section class="main-section">
+                <h1>Contact Us</h1>
+
+                <form id="contact-form">
+                    <ul>
+                        <li>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required="required">
+                        </li>
+                        <li>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required="required">
+                        </li>
+                        <li>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required="required"></textarea>
+                        </li>
+                    </ul>
+                    <input type="submit">
+                </form>
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>BE INFORMED ---- SPEAK UP ---- GET INVOLVED</p>
+            </div>
+        </footer>
+</body>
+
+</html>
